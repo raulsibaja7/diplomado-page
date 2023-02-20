@@ -1,2 +1,2 @@
 # Demo
-## (https://opinando.netlify.app/)
+## https://opinando.netlify.app/
