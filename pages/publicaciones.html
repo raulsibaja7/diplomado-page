@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opin-ando</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Opin-ando</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publicaciones.html">Publicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex mx-lg-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Iniciar sesión
+              </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal de inicio de sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Inicio de sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de recuperación de contraseña -->
+  <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resetPasswordModalLabel">Recuperación de contraseña</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="resetEmail" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="resetEmail" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Enviar correo de recuperación</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Publicaciones -->
+  
+  <div class="container mt-5 mb-5">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h1 class="fs-2">Selecciona un producto y empieza a <span class="text-primary">opinar</span>.</h1>
+          </div>
+          <div class="col-6">
+            <form class="d-flex">
+              <input class="form-control ms-5 me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/prod1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy M30</h5>
+            <ul>
+                <li>Pantalla Super AMOLED de 6.4 pulgadas</li>
+                <li>Batería de larga duración de 5000 mAh</li>
+                <li>Sistema de triple cámara trasera</li>
+                <li>Procesador octa-core y memoria RAM de hasta 6 GB</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/prod2.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Apple Iphone 11</h5>
+            <ul>
+                <li>Pantalla Liquid Retina de 6.1 pulgadas</li>
+                <li>Batería de larga duración</li>
+                <li>Sistema de doble cámara trasera</li>
+                <li>Procesador A13 Bionic de Apple</li>
+            </ul>          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/prod3.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy M20</h5>
+            <ul>
+                <li>Pantalla TFT de 6.3 pulgadas</li>
+                <li>Batería de larga duración de 5000 mAh</li>
+                <li>Sistema de doble cámara trasera</li>
+                <li>Procesador octa-core y memoria RAM de hasta 4 GB</li>
+            </ul>          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fila 2 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod4.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HP Pavilion 13</h5>
+              <ul>
+                <li>Pantalla: 15.6 pulgadas</li>
+                <li>Procesador: Intel Core i5</li>
+                <li>Memoria RAM: 8 GB</li>
+                <li>Almacenamiento interno: 256 GB SSD</li>
+                <li>Tarjeta gráfica: NVIDIA GeForce GTX 1650</li>
+                <li>Batería: Hasta 8 horas de duración</li>
+              </ul>            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod5.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lenovo Slim 13</h5>
+              <ul>
+                <li>Pantalla: 15.6 pulgadas</li>
+                <li>Procesador: Intel Core i5</li>
+                <li>Memoria RAM: 8 GB</li>
+                <li>Almacenamiento interno: 256 GB SSD</li>
+                <li>Tarjeta gráfica: NVIDIA GeForce MX330</li>
+                <li>Batería: Hasta 9 horas de duración</li>
+              </ul>            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod6.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HP Envy 13</h5>
+              <ul>
+                <li>Pantalla: 13.3 pulgadas</li>
+                <li>Procesador: Intel Core i7</li>
+                <li>Memoria RAM: 16 GB</li>
+                <li>Almacenamiento interno: 512 GB SSD</li>
+                <li>Tarjeta gráfica: Intel Iris Plus Graphics</li>
+                <li>Batería: Hasta 13 horas de duración</li>
+              </ul>            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fila 3 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod7.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bose QC35</h5>
+              <ul>
+                <li>Tipo de auriculares: Supraurales</li>
+                <li>Cancelación de ruido activa</li>
+                <li>Autonomía de hasta 20 horas</li>
+                <li>Bluetooth y NFC</li>
+                <li>Control por voz con el Asistente de Google y Amazon Alexa</li>
+                <li>Compatibles con la aplicación Bose Connect</li>
+              </ul>            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod8.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Beats Studio 3</h5>
+              <ul>
+                <li>Tipo de auriculares: Supraurales</li>
+                <li>Cancalación de ruido adaptativa</li>
+                <li>Autonomía de hasta 22 horas</li>
+                <li>Conexión inalámbrica con tecnología Bluetooth</li>
+                <li>Compatibles con la aplicación Beats</li>
+              </ul>            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+    Dejar opinión
+  </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/prod9.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Beats Solo 3</h5>
+              <ul>
+                <li>Tipo de auriculares: Supraurales</li>
+                <li>Cancalación de ruido adaptativa</li>
+                <li>Autonomía de hasta 12 horas</li>
+                <li>Conexión inalámbrica con tecnología Bluetooth</li>
+                <li>Compatibles con la aplicación Beats</li>
+              </ul>            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#opinionModal">
+                    Dejar opinión
+                  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="opinionModal" tabindex="-1" aria-labelledby="opinionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="opinionModalLabel">Deja tu opinión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="opinion" class="form-label"><span class="text-primary">Cuéntanos</span> acerca del producto</label>
+              <textarea class="form-control" id="opinion" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- paginación -->
+  <div class="my-5 w-100 d-flex align-items-center justify-content-center flex-wrap">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+  </div>
+  
+
+  <!-- Footer -->
+
+  <footer class="w-100 d-flex  align-items-center justify-content-center flex-wrap mt-auto">
+    <p class="fs-5 px-3 pt-3">Opin-ando &reg; Todos Los Derechos Reservados 2023</p>
+    <div id="iconos" >
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>  
+    </div>
+  </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>

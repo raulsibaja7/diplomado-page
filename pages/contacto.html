@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opin-ando</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Opin-ando</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publicaciones.html">Publicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex mx-lg-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Iniciar sesión
+              </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal de inicio de sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Inicio de sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de recuperación de contraseña -->
+  <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resetPasswordModalLabel">Recuperación de contraseña</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="resetEmail" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="resetEmail" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Enviar correo de recuperación</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Contacto -->
+
+
+    <div class="container">
+        <h1 class="my-5 fs-2">Déjanos tus datos para ponernos en <span class="text-primary">contacto</span>.</h1>
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-3">
+              <div class="form-group">
+                <label for="subject">Asunto:</label>
+                <input type="text" class="form-control" id="subject" placeholder="Ingresa el asunto de tu mensaje">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-3">
+              <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Ingresa tu mensaje"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 my-4">
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+
+  <!-- Footer -->
+
+  <footer class="w-100 d-flex  align-items-center justify-content-center flex-wrap mt-auto">
+    <p class="fs-5 px-3 pt-3">Opin-ando &reg; Todos Los Derechos Reservados 2023</p>
+    <div id="iconos" >
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>  
+    </div>
+  </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>
